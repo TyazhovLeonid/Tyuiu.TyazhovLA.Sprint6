@@ -63,19 +63,18 @@
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 2;
-            textBox2.Text = "";
-            //textBox2.TextChanged += this.textBox2_TextChanged;
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.ActiveCaption;
             button1.ForeColor = Color.IndianRed;
             button1.Location = new Point(570, 379);
             button1.Name = "button1";
             button1.Size = new Size(172, 59);
             button1.TabIndex = 3;
             button1.Text = "Вычислить";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += this.button1_Click;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // FormMain
             // 
