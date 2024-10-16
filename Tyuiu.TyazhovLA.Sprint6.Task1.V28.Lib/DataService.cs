@@ -5,10 +5,15 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task1.V28.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
-            double [] result = new double[stopValue-startValue+1];
-            for (int i = startValue; i <= stopValue; i++)
+            int len = (stopValue - startValue + 1);
+            double [] result = new double[len];
+            int indx = 0;
+            for (int x = startValue; x <= stopValue; x++)
             {
-                result[i] = Math.Round((Math.Cos(i)+2*i-Math.Sin(i)*3*i),2);
+                double y = Math.Cos(x) + 2 * x - Math.Sin(x) * 3 * x;
+                result[indx] = Math.Round(y,2);
+                indx++;
+ 
             }
             return result;
         }

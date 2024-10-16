@@ -13,8 +13,9 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task1.V28
             try
             {
                 string strLine;
-                int StartStep = Convert.ToInt32(textBoxST.Text);
-                int StopStep = Convert.ToInt32(textBoxET.Text);
+                DataService ds = new DataService();
+                int StartStep = Convert.ToInt32(textBoxStart.Text);
+                int StopStep = Convert.ToInt32(textBoxEnd.Text);
                 int len = ds.GetMassFunction(StartStep, StopStep).Length;
                 double[] valueArray = new double[len];
                 valueArray = ds.GetMassFunction(StartStep, StopStep);

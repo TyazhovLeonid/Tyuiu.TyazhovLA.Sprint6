@@ -8,11 +8,12 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task1.V28.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            int start = 0;
+            int start = -5;
             int end = 5;
-            double[] wait = new double[] { 1, 0.02, -1.87, 3.74, 16.43, 24.67 };
+            double[] wait = new double[] { 4.67, 0.43, -8.26, -9.87, -3.98, 1.00, 0.02, -1.87, 3.74, 16.43, 24.67 }; 
             double[] res = ds.GetMassFunction(start, end);
-            CollectionAssert.AreEqual(wait, res);
+            CollectionAssert.AreEqual(wait , res);
+            
 
         }
     }

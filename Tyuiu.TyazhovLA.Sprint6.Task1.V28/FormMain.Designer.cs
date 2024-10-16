@@ -149,12 +149,15 @@
             // 
             // Tablica
             // 
+            Tablica.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Tablica.Location = new Point(6, 26);
             Tablica.Multiline = true;
             Tablica.Name = "Tablica";
             Tablica.ReadOnly = true;
+            Tablica.ScrollBars = ScrollBars.Both;
             Tablica.Size = new Size(238, 394);
             Tablica.TabIndex = 4;
+            Tablica.WordWrap = false;
             // 
             // FormMain
             // 

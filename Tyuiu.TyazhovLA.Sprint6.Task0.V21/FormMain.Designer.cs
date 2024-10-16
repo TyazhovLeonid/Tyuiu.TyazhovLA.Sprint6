@@ -63,6 +63,7 @@
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 2;
+            //textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button1
             // 

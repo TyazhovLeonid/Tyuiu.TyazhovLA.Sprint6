@@ -15,10 +15,12 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task0.V21
             {
                 textBox2.Text = Convert.ToString(ds.Calculate(2));
             }
-            catch 
+            catch
             {
                 MessageBox.Show("¬ведены неверные данные", "ќшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
     }
 }
