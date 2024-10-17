@@ -54,7 +54,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task1.V28
                 Tablica.AppendText("+----------+----------+" + Environment.NewLine);
                 for (int i = 0; i <= len - 1; i++)
                 {
-                    strLine = String.Format("|{0,5:d}   |    {1,5:f2}   |", StartStep, valueArray[i]);
+                    strLine = String.Format("|{0,5:d}     |  {1,5:f2}   |", StartStep, valueArray[i]);
                     Tablica.AppendText(strLine + Environment.NewLine);
                     StartStep++;
                 }
