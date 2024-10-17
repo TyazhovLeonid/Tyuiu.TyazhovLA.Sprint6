@@ -118,6 +118,7 @@
             buttonGo.TabIndex = 5;
             buttonGo.Text = "Вычислить";
             buttonGo.UseVisualStyleBackColor = false;
+            buttonGo.Click += buttonGo_Click_1;
             // 
             // textBoxEnd
             // 
