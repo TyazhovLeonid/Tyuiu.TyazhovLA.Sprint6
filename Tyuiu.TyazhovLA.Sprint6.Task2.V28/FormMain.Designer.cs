@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             Условие = new GroupBox();
+            pictureBox1 = new PictureBox();
             textBoxTask = new TextBox();
             groupBoxInfo = new GroupBox();
             textBoxET = new TextBox();
@@ -41,12 +42,11 @@
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            pictureBox1 = new PictureBox();
             Условие.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBoxInfo.SuspendLayout();
             groupBoxResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Условие
@@ -60,6 +60,15 @@
             Условие.TabIndex = 4;
             Условие.TabStop = false;
             Условие.Text = "Условие";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(6, 59);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(441, 42);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
             // 
             // textBoxTask
             // 
@@ -149,6 +158,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(227, 393);
             dataGridView1.TabIndex = 0;
+            
             // 
             // Column1
             // 
@@ -166,20 +176,11 @@
             Column2.ReadOnly = true;
             Column2.Width = 90;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(6, 59);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(441, 42);
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
-            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(788, 446);
             Controls.Add(Условие);
             Controls.Add(groupBoxInfo);
             Controls.Add(groupBoxResult);
@@ -187,11 +188,11 @@
             Text = "FormMain";
             Условие.ResumeLayout(false);
             Условие.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBoxInfo.ResumeLayout(false);
             groupBoxInfo.PerformLayout();
             groupBoxResult.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 

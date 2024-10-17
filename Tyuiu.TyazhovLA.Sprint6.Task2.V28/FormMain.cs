@@ -19,18 +19,22 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task2.V28
                 int len = ds.GetMassFunction(StartStep, StopStep).Length;
                 double[] valueArray = new double[len];
                 valueArray = ds.GetMassFunction(StartStep, StopStep);
-                
+
                 for (int i = 0; i <= len - 1; i++)
                 {
                     this.dataGridView1.Rows.Add(Convert.ToString(StartStep), Convert.ToString(valueArray[i]));
                     StartStep++;
                 }
-                
+
+
+
             }
             catch
             {
                 MessageBox.Show("¬ведены неверные данные", "ќшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }
