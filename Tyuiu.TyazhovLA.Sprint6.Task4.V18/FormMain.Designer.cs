@@ -41,12 +41,14 @@
             splitter1 = new Splitter();
             panel3 = new Panel();
             groupBoxChart = new GroupBox();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             groupBoxUSL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             groupBoxTabRes.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -126,6 +128,7 @@
             // 
             // groupBoxTabRes
             // 
+            groupBoxTabRes.Controls.Add(dataGridView1);
             groupBoxTabRes.Controls.Add(textBoxRes);
             groupBoxTabRes.Location = new Point(3, 3);
             groupBoxTabRes.Name = "groupBoxTabRes";
@@ -173,6 +176,16 @@
             groupBoxChart.TabStop = false;
             groupBoxChart.Text = "График";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(-23, 122);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(300, 188);
+            dataGridView1.TabIndex = 3;
+            
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -191,6 +204,7 @@
             groupBoxTabRes.ResumeLayout(false);
             groupBoxTabRes.PerformLayout();
             panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -208,5 +222,6 @@
         private Button buttonSave;
         private Button buttonDone;
         private TextBox textBoxRes;
+        private DataGridView dataGridView1;
     }
 }
