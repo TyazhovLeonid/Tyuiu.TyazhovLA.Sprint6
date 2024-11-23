@@ -13,7 +13,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task5.V4.Lib
             
             for (int i = 0; i < valueArray.Length; i++)
             {
-                valuesArray[i]=Convert.ToDouble(valueArray[i]);
+                if (Convert.ToDouble(valueArray[i]) % 1 == 0) valuesArray[i] = Convert.ToDouble(valueArray[i]);
             }
             return valuesArray;
 
