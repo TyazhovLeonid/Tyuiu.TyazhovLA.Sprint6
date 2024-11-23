@@ -9,7 +9,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task5.V4.Lib
         {
             string [] valueArray = File.ReadAllLines(path);
             
-            double[] valuesArray = new double[valueArray.Length];
+            double[] valuesArray = new double[15];
             
             for (int i = 0; i < valueArray.Length; i++)
             {
