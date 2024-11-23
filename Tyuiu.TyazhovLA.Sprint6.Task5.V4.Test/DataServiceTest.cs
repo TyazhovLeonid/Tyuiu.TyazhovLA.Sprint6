@@ -10,7 +10,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task5.V4.Test
         {
             DataService ds = new DataService();
             string path = "C:\\DataSprint5\\Sprint6Task5\\InPutDataFileTask5V4.txt";
-            double[] wait = new double [] { -1, 2.5,3,-1,-2.6,-3,0,5.7,-5,6,-6.8,7,-7,8,-8,9.9,-9,10,-10,0 };
+            double[] wait = new double [] { -1.00, 3.00,-1.00,-3.00,0.00,-5.00,6.00,7.00,-7.00,8.00,-8.00,-9.00,10.00,-10.00,0.00 };
             double [] res = ds.LoadFromDataFile(path);
             CollectionAssert.AreEqual(wait, res);
         }
