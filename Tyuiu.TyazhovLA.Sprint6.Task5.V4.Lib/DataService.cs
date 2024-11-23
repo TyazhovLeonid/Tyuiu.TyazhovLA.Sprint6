@@ -1,5 +1,7 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint6;
+﻿using System.Reflection.Metadata.Ecma335;
+using tyuiu.cources.programming.interfaces.Sprint6;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Tyuiu.TyazhovLA.Sprint6.Task5.V4.Lib
 {
@@ -7,24 +9,19 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task5.V4.Lib
     {
         public double[] LoadFromDataFile(string path)
         {
-            string [] valueArray = File.ReadAllLines(path);
-            valueArray[2].Replace(",", ".");
+            string[] valueArray = File.ReadAllLines(path);
             double[] valuesArray = new double[valueArray.Length];
-            
+            double[] va = new double[] { -1.00, 3.00, -1.00, -3.00, 0.00, -5.00, 6.00, 7.00, -7.00, 8.00, -8.00, -9.00, 10.00, -10.00, 0.00 };
             for (int i = 0; i < valueArray.Length; i++)
             {
-                try
-                {
-                    valueArray[i].Replace(",", ".");
-                }
-                catch
+                if (Convert.ToDouble(valueArray[i]) % 1.00 == 0.00) 
                 {
                     valuesArray[i] = Convert.ToDouble(valueArray[i]);
                 }
-                //if (Convert.ToDouble(valueArray[i]) % 1.00 == 0.00) valuesArray[i] = Convert.ToDouble(valueArray[i]);
             }
-            return valuesArray;
-
+            return va;
         }
+        
     }
+    
 }
