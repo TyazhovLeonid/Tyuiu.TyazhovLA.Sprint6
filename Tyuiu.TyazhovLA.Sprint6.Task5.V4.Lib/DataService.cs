@@ -8,7 +8,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task5.V4.Lib
         public double[] LoadFromDataFile(string path)
         {
             string [] valueArray = File.ReadAllLines(path);
-            
+            valueArray[1].Replace(",", ".");
             double[] valuesArray = new double[valueArray.Length];
             
             for (int i = 0; i < valueArray.Length; i++)
