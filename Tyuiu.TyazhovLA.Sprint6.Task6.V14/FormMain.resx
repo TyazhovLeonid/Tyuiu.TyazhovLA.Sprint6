@@ -117,7 +117,48 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonHelp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Дан файл InPutFileTask6V14.txt который может находится в любом месте на диске. Загрузить файл в textBoxIn через openFileDialog. Вывести слова в которых встречается z в результирующею строку и вывести ее в textBoxOut.</value>
+  </data>
+  <metadata name="openFileDialogTask.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
 </root>
