@@ -24,8 +24,8 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task6.V14
         DataService ds = new DataService();
         private void buttonDone_Click(object sender, EventArgs e)
         {
-            string str = "z";
-            textBoxOut.Text = ds.CollectTextFromFile(str, openFilePath);
+            
+            textBoxOut.Text = ds.CollectTextFromFile(openFilePath);
         }
     }
 }
