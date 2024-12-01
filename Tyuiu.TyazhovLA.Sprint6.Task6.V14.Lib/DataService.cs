@@ -13,7 +13,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task6.V14.Lib
 
             foreach (string word in inputSplit)
             {
-                if (word.IndexOf('z', StringComparison.OrdinalIgnoreCase) >= 0)
+                if (word.IndexOf('z') >= 0)
                 {
                     resStr.Append(word + " ");
                 }
