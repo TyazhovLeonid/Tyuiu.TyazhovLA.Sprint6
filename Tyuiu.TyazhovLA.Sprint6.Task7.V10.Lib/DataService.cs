@@ -26,7 +26,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task7.V10.Lib
             int xRow = 4; 
             for (int j = 0; j < columns; j++)
             {
-                if (matrix[xRow, j] >= 5 && matrix[xRow, j] <= 10)
+                if (matrix[xRow, j] >= 5 && matrix[xRow, j] < 10)
                 {
                     matrix[xRow, j] = 0;
                 }
