@@ -17,6 +17,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task3.V22
             textBox1 = new TextBox();
             button1 = new Button();
             groupBox2 = new GroupBox();
+            buttonQuestion = new Button();
             dataGridView1 = new DataGridView();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -65,6 +66,18 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task3.V22
             groupBox2.TabStop = false;
             groupBox2.Text = "Результат";
             // 
+            // buttonQuestion
+            // 
+            buttonQuestion.FlatStyle = FlatStyle.Flat;
+            buttonQuestion.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonQuestion.Location = new Point(562, 0);
+            buttonQuestion.Name = "buttonQuestion";
+            buttonQuestion.Size = new Size(38, 42);
+            buttonQuestion.TabIndex = 5;
+            buttonQuestion.Text = "?";
+            buttonQuestion.UseVisualStyleBackColor = true;
+            buttonQuestion.Click += buttonQuestion_Click;
+            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -77,6 +90,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task3.V22
             // Form1
             // 
             ClientSize = new Size(612, 372);
+            Controls.Add(buttonQuestion);
             Controls.Add(groupBox2);
             Controls.Add(button1);
             Controls.Add(groupBox1);
@@ -96,20 +110,28 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task3.V22
         private void button1_Click(object sender, EventArgs e)
         {
             this.dataGridView1.ColumnCount = 5;
-            this.dataGridView1.RowCount= 5;
+            this.dataGridView1.RowCount = 5;
             int[,] data = new int[,] { { 17, 0, 19, -8, -1 },
                                                                {9,   4,  -5,   7,  15},
                                                                {11,  13,   4,  -4, -14},
                                                                {11,  14,   5, -15,  16},
                                                                { 2, -14,  -2,  11,  11} };
             int[,] matrix = ds.Calculate(data);
-            for (int i = 0; i < 5;i++)
+            for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    dataGridView1.Rows[i].Cells[j].Value = Convert.ToString(matrix[i,j]);
+                    dataGridView1.Rows[i].Cells[j].Value = Convert.ToString(matrix[i, j]);
                 }
             }
         }
+
+        private Button buttonQuestion;
+
+        private void buttonQuestion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Task 3 | Выполнил Тяжов Леонид Александрович | ПКТб-24-1", "Справка", MessageBoxButtons.OK);
+        }
     }
+
 }

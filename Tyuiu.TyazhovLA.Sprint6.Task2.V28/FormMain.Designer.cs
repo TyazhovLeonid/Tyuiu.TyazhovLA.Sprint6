@@ -42,6 +42,7 @@
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            buttonQuestion = new Button();
             Условие.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBoxInfo.SuspendLayout();
@@ -81,6 +82,7 @@
             // 
             // groupBoxInfo
             // 
+            groupBoxInfo.Controls.Add(buttonQuestion);
             groupBoxInfo.Controls.Add(textBoxET);
             groupBoxInfo.Controls.Add(textBoxST);
             groupBoxInfo.Controls.Add(buttonGo);
@@ -158,7 +160,6 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(227, 393);
             dataGridView1.TabIndex = 0;
-            
             // 
             // Column1
             // 
@@ -175,6 +176,18 @@
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
             Column2.Width = 90;
+            // 
+            // buttonQuestion
+            // 
+            buttonQuestion.FlatStyle = FlatStyle.Flat;
+            buttonQuestion.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonQuestion.Location = new Point(284, 122);
+            buttonQuestion.Name = "buttonQuestion";
+            buttonQuestion.Size = new Size(38, 39);
+            buttonQuestion.TabIndex = 7;
+            buttonQuestion.Text = "?";
+            buttonQuestion.UseVisualStyleBackColor = true;
+            buttonQuestion.Click += buttonQuestion_Click;
             // 
             // FormMain
             // 
@@ -211,5 +224,6 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private PictureBox pictureBox1;
+        private Button buttonQuestion;
     }
 }

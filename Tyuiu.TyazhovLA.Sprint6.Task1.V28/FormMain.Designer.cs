@@ -40,6 +40,7 @@
             textBoxStart = new TextBox();
             groupBoxResult = new GroupBox();
             Tablica = new TextBox();
+            buttonQuestion = new Button();
             Условие.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxFunction).BeginInit();
             groupBoxInfo.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // groupBoxInfo
             // 
+            groupBoxInfo.Controls.Add(buttonQuestion);
             groupBoxInfo.Controls.Add(textBoxET);
             groupBoxInfo.Controls.Add(textBoxST);
             groupBoxInfo.Controls.Add(buttonGo);
@@ -160,6 +162,18 @@
             Tablica.TabIndex = 4;
             Tablica.WordWrap = false;
             // 
+            // buttonQuestion
+            // 
+            buttonQuestion.FlatStyle = FlatStyle.Flat;
+            buttonQuestion.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonQuestion.Location = new Point(294, 122);
+            buttonQuestion.Name = "buttonQuestion";
+            buttonQuestion.Size = new Size(38, 39);
+            buttonQuestion.TabIndex = 5;
+            buttonQuestion.Text = "?";
+            buttonQuestion.UseVisualStyleBackColor = true;
+            buttonQuestion.Click += buttonQuestion_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -193,5 +207,6 @@
         private Button buttonGo;
         private GroupBox groupBoxResult;
         private TextBox Tablica;
+        private Button buttonQuestion;
     }
 }

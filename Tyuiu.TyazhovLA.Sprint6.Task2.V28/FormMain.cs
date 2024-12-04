@@ -35,6 +35,9 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task2.V28
             }
         }
 
-        
+        private void buttonQuestion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Task 2 | Выполнил Тяжов Леонид Александрович | ПКТб-24-1", "Справка", MessageBoxButtons.OK);
+        }
     }
 }

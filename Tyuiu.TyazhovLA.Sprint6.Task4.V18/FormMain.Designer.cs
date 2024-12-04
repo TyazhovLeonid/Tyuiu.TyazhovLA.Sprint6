@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel1 = new Panel();
             groupBoxUSL = new GroupBox();
+            buttonQuestion = new Button();
             buttonSave = new Button();
             buttonDone = new Button();
             pictureBox1 = new PictureBox();
@@ -41,14 +45,15 @@
             splitter1 = new Splitter();
             panel3 = new Panel();
             groupBoxChart = new GroupBox();
-            dataGridView1 = new DataGridView();
+            chartFunction = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel1.SuspendLayout();
             groupBoxUSL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             groupBoxTabRes.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBoxChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chartFunction).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -62,6 +67,7 @@
             // 
             // groupBoxUSL
             // 
+            groupBoxUSL.Controls.Add(buttonQuestion);
             groupBoxUSL.Controls.Add(buttonSave);
             groupBoxUSL.Controls.Add(buttonDone);
             groupBoxUSL.Controls.Add(pictureBox1);
@@ -73,6 +79,18 @@
             groupBoxUSL.TabIndex = 0;
             groupBoxUSL.TabStop = false;
             groupBoxUSL.Text = "Условие";
+            // 
+            // buttonQuestion
+            // 
+            buttonQuestion.FlatStyle = FlatStyle.Flat;
+            buttonQuestion.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonQuestion.Location = new Point(750, 23);
+            buttonQuestion.Name = "buttonQuestion";
+            buttonQuestion.Size = new Size(38, 39);
+            buttonQuestion.TabIndex = 5;
+            buttonQuestion.Text = "?";
+            buttonQuestion.UseVisualStyleBackColor = true;
+            buttonQuestion.Click += buttonQuestion_Click;
             // 
             // buttonSave
             // 
@@ -128,7 +146,6 @@
             // 
             // groupBoxTabRes
             // 
-            groupBoxTabRes.Controls.Add(dataGridView1);
             groupBoxTabRes.Controls.Add(textBoxRes);
             groupBoxTabRes.Location = new Point(3, 3);
             groupBoxTabRes.Name = "groupBoxTabRes";
@@ -168,6 +185,7 @@
             // 
             // groupBoxChart
             // 
+            groupBoxChart.Controls.Add(chartFunction);
             groupBoxChart.Dock = DockStyle.Fill;
             groupBoxChart.Location = new Point(0, 0);
             groupBoxChart.Name = "groupBoxChart";
@@ -176,14 +194,21 @@
             groupBoxChart.TabStop = false;
             groupBoxChart.Text = "График";
             // 
-            // dataGridView1
+            // chartFunction
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(-23, 122);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(300, 188);
-            dataGridView1.TabIndex = 3;
+            chartArea1.Name = "ChartArea1";
+            chartFunction.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chartFunction.Legends.Add(legend1);
+            chartFunction.Location = new Point(3, 26);
+            chartFunction.Name = "chartFunction";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chartFunction.Series.Add(series1);
+            chartFunction.Size = new Size(493, 287);
+            chartFunction.TabIndex = 0;
+            chartFunction.Text = "chart1";
             
             // 
             // FormMain
@@ -204,7 +229,8 @@
             groupBoxTabRes.ResumeLayout(false);
             groupBoxTabRes.PerformLayout();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBoxChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)chartFunction).EndInit();
             ResumeLayout(false);
         }
 
@@ -222,6 +248,7 @@
         private Button buttonSave;
         private Button buttonDone;
         private TextBox textBoxRes;
-        private DataGridView dataGridView1;
+        private Button buttonQuestion;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartFunction;
     }
 }

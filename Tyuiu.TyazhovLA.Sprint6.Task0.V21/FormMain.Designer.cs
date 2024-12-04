@@ -33,6 +33,7 @@
             pictureBox1 = new PictureBox();
             textBox2 = new TextBox();
             button1 = new Button();
+            buttonQuestion = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +64,6 @@
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 2;
-            //textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button1
             // 
@@ -77,11 +77,24 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // buttonQuestion
+            // 
+            buttonQuestion.FlatStyle = FlatStyle.Flat;
+            buttonQuestion.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonQuestion.Location = new Point(497, 379);
+            buttonQuestion.Name = "buttonQuestion";
+            buttonQuestion.Size = new Size(49, 52);
+            buttonQuestion.TabIndex = 5;
+            buttonQuestion.Text = "?";
+            buttonQuestion.UseVisualStyleBackColor = true;
+            buttonQuestion.Click += buttonQuestion_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonQuestion);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(pictureBox1);
@@ -99,5 +112,6 @@
         private PictureBox pictureBox1;
         private TextBox textBox2;
         private Button button1;
+        private Button buttonQuestion;
     }
 }

@@ -36,6 +36,7 @@
             groupBox1 = new GroupBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             chartDiag = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            buttonQuestion = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewRawData).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartDiag).BeginInit();
@@ -90,11 +91,24 @@
             chartDiag.TabIndex = 3;
             chartDiag.Text = "chart1";
             // 
+            // buttonQuestion
+            // 
+            buttonQuestion.FlatStyle = FlatStyle.Flat;
+            buttonQuestion.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonQuestion.Location = new Point(943, 1);
+            buttonQuestion.Name = "buttonQuestion";
+            buttonQuestion.Size = new Size(38, 39);
+            buttonQuestion.TabIndex = 4;
+            buttonQuestion.Text = "?";
+            buttonQuestion.UseVisualStyleBackColor = true;
+            buttonQuestion.Click += buttonQuestion_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(993, 540);
+            Controls.Add(buttonQuestion);
             Controls.Add(chartDiag);
             Controls.Add(groupBox1);
             Name = "FormMain";
@@ -113,5 +127,6 @@
         private GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDiag;
+        private Button buttonQuestion;
     }
 }

@@ -20,7 +20,7 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task5.V4
                 for (int i = 0; i < valueArray.Length; i++)
                 {
                     dataGridViewRawData.Rows.Add(valueArray[i]);
-                    chartDiag.Series[0].Points.AddXY(valueArray[i],i);
+                    chartDiag.Series[0].Points.AddXY(valueArray[i], i);
 
                 }
             }
@@ -34,6 +34,11 @@ namespace Tyuiu.TyazhovLA.Sprint6.Task5.V4
         private void FormMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonQuestion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Task 5 | Выполнил Тяжов Леонид Александрович | ПКТб-24-1", "Справка", MessageBoxButtons.OK);
         }
     }
 }
